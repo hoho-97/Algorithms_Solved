@@ -14,7 +14,7 @@ dy = [0, 0, -1, 1]
 def bfs(startX, startY):
     global danji, visited
 
-    queue = deque([[startX, startY]])
+    queue = deque([(startX, startY)])
     danji_num = 0
 
     while queue:
@@ -28,7 +28,7 @@ def bfs(startX, startY):
             if 0 <= nx < n and 0 <= ny < n:
                 if visited[nx][ny] == 0 and danji[nx][ny] != 0:
                     visited[nx][ny] = True
-                    queue.append([nx, ny])
+                    queue.append((nx, ny))
 
     return danji_num
 
