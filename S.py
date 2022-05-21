@@ -1,2 +1,4 @@
-l = []
-l.append()
+ans = 'abcd'
+ans = list(ans)
+print(ans)
+print(str(ans))
