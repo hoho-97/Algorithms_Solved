@@ -1,4 +1,1 @@
-ans = 'abcd'
-ans = list(ans)
-print(ans)
-print(str(ans))
+n=int(input())
