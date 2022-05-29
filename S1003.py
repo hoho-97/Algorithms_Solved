@@ -9,4 +9,3 @@ for i in range(2, 41):
 for _ in range(t):
     n = int(st.readline())
     print(arr[n][0], arr[n][1])
-
