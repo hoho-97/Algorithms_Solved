@@ -1,14 +1,15 @@
+from math import sqrt
 from sys import stdin as st
 
-while True:
-    n, m = map(int, st.readline().split())
+n = int(st.readline())
+ans = n
+for m in range(int(sqrt(n)), 0, -1):
+    num = n
+    count = 0
+    for i in range(m, 0, -1):
+        while num >= i ** 2:
+            num -= i ** 2
+            count += 1
+    ans = min(ans, count)
 
-    if n == 0 and m == 0:
-        break
-
-    if n <= m and m % n == 0:
-        print('factor')
-    elif n > m and n % m == 0:
-        print('multiple')
-    else:
-        print('neither')
+print(ans)
